@@ -1,39 +1,41 @@
+
+/*
+ * file - 102-print_comb5
+ */
+
 #include <stdio.h>
 
 /**
- * main - prints all possible different combinations of two two digits
- * Return: ALways 0 (Success)
+ * main - print combo
+ *
+ * Return: Always 0
  */
+
 int main(void)
 {
-	int a, b, c, d = 48;
-	
-	while ((a + b) != (c + d))
+
+	int num1, num2;
+
+	for (num1 = 0; num1 <= 98; num1++)
 	{
-		for (a = 48; a < 58; a++)
+		for (num2 = num1 + 1; num2 <= 99; num2++)
 		{
-			for (b = 48; b <= 57; b++)
-			{
-				for (c = 48; c <= 57; c++)
-				{
-					for (d = 48; d < 58; d++)
-					{
-						putchar(a);
-						putchar(b);
-						putchar(' ');
-						putchar(c);		
-						putchar(d);
-						if (((a > b) && (c == d)))
-						{
-							break;
-						}
-						putchar(',');
-						putchar(' ');
-					}
-				}
-			}
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
+
+			if (num1 == 98 && num2 == 99)
+				continue;
+
+			putchar(',');
+			putchar(' ');
 		}
 	}
+
 	putchar('\n');
+
 	return (0);
 }
+
