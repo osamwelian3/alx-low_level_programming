@@ -38,3 +38,5 @@ void print_to_98(int n)
 	}
 	printf("\n");
 }
+
+void print_to_98(int);
