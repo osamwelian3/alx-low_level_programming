@@ -5,7 +5,7 @@
  * Return: always 0 (success)
  */
 
-int main(void)
+int main(void) // prints _putchar
 {
 	/*
 	 * Prints _putchar
