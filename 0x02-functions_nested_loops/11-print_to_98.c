@@ -19,11 +19,11 @@ void print_to_98(int n){
 	int number = n;
 
 	for(count = n; count <99; count++){
-	   putchar(number);
+	   printf(number);
  	   number++;
-	   putchar(',');
+	   printf(',');
 
 	}
-	putchar('\n');
+	printf('\n');
 
 }
