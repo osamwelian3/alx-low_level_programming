@@ -19,9 +19,9 @@ void print_to_98(int n){
 	int number = n;
 
 	for(count = n; count <99; count++){
-	   _putchar(number);
+	   putchar(number);
  	   number++;
-	   _putchar(',');
+	   putchar(',');
 
 	}
 	putchar('\n');
