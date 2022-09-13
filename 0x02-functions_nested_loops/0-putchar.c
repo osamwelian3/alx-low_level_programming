@@ -1,12 +1,12 @@
 #include "main.h"
-/*
+/**
  * main - Prints _putchar
  * putchar - Prints characters
  * Return: always 0 (success)
  */
 
 int main(void){
-	/*
+	/**
 	 * Prints _putchar
 	 */
 	int str[] = {95, 112, 117, 116, 99, 104, 97, 114};
