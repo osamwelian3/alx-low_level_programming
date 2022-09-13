@@ -6,7 +6,7 @@
  */
 
 #include "main.h"
-
+#include <stdio.h>
 /**
  * 11-print_to_98.c - prints all natural numbers from n to 98 followed by a line
  * @c: The character to be checked.
