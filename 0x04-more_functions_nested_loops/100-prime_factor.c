@@ -8,8 +8,8 @@
 int main(void)
 {
 	long int i, p, fp = 612852475143;
-	i = 2;
 	
+	i = 2;
 	while (i <= 612852475143 && fp > 1)
 	{
 		p = i;
