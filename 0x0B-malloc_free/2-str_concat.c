@@ -1,36 +1,46 @@
-#include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
-#include <string.h>
 
 /**
- * _strdup - Prints the number of argumnets
+ * str_concat - Concatenates two strings.
+ * @s1: The string to be concatenated upon.
+ * @s2: The string to be concatenated to s1.
  *
- * @str: argument count
- *
- *
- * Return: return 0
+ * Return: If concatenation fails - NULL.
+ *         Otherwise - a pointer the newly-allocated space in memory
+ *                     containing the concatenated strings.
  */
-char *_strdup(char *str)
+char *str_concat(char *s1, char *s2)
 {
-	char *dup;
-	unsigned int i, len;
+	char *concat;
+	unsigned int i;
+	unsigned int j;
+	unsigned int length_S1;
+	unsigned int length_S2;
+	unsigned int length_c;
 
-	i = 0;
-	len = 0;
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-	if (str == NULL)
+	for (length_S1 = 0; s1[length_S1] != '\0'; length_S1++)
+		;
+
+	for (length_S2 = 0; s2[length_S2] != '\0'; length_S2++)
+		;
+
+	length_c = length_S1 + length_S2;
+
+	concat = malloc((length_c + 1) * sizeof(char));
+	if (concat == NULL)
 		return (NULL);
 
-	while (str[len])
-		len++;
+	for (i = 0; i < length_S1; i++)
+		concat[i] = s1[i];
 
-	dup = malloc(sizeof(char) * (len + 1));
+	for (j = 0; j < length_S2; i++, j++)
+		concat[i] = s2[j];
 
-	if (dup == NULL)
-		return (NULL);
-
-	while ((dup[i] = str[i]) != '\0')
-		i++;
-
-	return (dup);
+	return (concat);
 }
