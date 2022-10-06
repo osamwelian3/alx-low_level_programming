@@ -1,19 +1,20 @@
-#include <stdio.h>
 #include "main.h"
-
+#include <stdlib.h>
 /**
- * malloc_checked - Prints the number of argumnets
+ * malloc_checked - allocates memory.
+ * @b: amount of bytes.
  *
- * @b: argument count
- *
- * Return: return 0
+ * Return: pointer to the allocated memory.
+ * if malloc fails, status value is equal to 98.
  */
 void *malloc_checked(unsigned int b)
 {
-	char *i;
+	int *pointer;
 
-	i = malloc(b);
-	if (i == NULL)
+	pointer = malloc(b);
+
+	if (pointer == NULL)
 		exit(98);
-	return (i);
+
+	return (pointer);
 }
