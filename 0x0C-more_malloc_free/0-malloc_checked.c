@@ -1,18 +1,19 @@
+#include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
- * malloc_checked - Function that alloates memory using malloc
- * @b: unsigned int
- *
- * Return: void
- */
+ *malloc_checked - asd
+ *@b: asd
+ **/
 void *malloc_checked(unsigned int b)
 {
-	void *ptr;
+	void *mem_space;
 
-	ptr = malloc(b);
+	mem_space = malloc(b);
 
-	if (ptr == NULL)
-		exit(98);
-	return (ptr);
+	if (mem_space == NULL)
+		exit (98);
+
+	return (mem_space);
 }
