@@ -1,19 +1,19 @@
-#include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
 
 /**
- *malloc_checked - asd
- *@b: asd
- **/
+ * malloc_checked - Prints the number of argumnets
+ *
+ * @b: argument count
+ *
+ * Return: return 0
+ */
 void *malloc_checked(unsigned int b)
 {
-	void *mem_space;
+	char *i;
 
-	mem_space = malloc(b);
-
-	if (mem_space == NULL)
-		exit (98);
-
-	return (mem_space);
+	i = malloc(b);
+	if (i == NULL)
+		exit(98);
+	return (i);
 }
